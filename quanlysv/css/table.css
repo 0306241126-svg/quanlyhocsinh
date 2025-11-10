@@ -1,0 +1,92 @@
+/* ===== TABLE STYLES ===== */
+.table-container {
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 25px 30px;
+    border-left: 4px solid #3b7ddd;
+    overflow-x: auto; /* Cho phép cuộn ngang trên màn hình nhỏ */
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border: 1px solid #e0e0e0; /* Thêm viền cho toàn bộ bảng */
+}
+
+.data-table th,
+.data-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border: 1px solid #e0e0e0; /* Thêm viền cho các ô */
+    vertical-align: middle;
+    white-space: nowrap; /* Ngăn không cho nội dung xuống hàng */
+}
+
+.data-table th {
+    background-color: #f8f9fa;
+    color: #333;
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.data-table tbody tr:hover {
+    background-color: #f1f5f9;
+}
+
+.data-table td {
+    color: #555;
+    font-size: 14px;
+}
+
+/* Căn giữa cho cột STT */
+.data-table th:first-child,
+.data-table td:first-child {
+    text-align: center;
+}
+
+/* Trạng thái tài khoản */
+.status-active, .status-locked {
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 600;
+    color: #fff;
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.status-active {
+    background-color: #28a745; /* Green */
+}
+
+.status-locked {
+    background-color: #dc3545; /* Red */
+}
+
+/* Nút hành động trong bảng */
+.action-btn {
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 6px;
+    margin-right: 5px;
+    color: #fff;
+    font-size: 13px;
+    transition: opacity 0.2s;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+.action-cell {
+    white-space: nowrap;
+}
+.action-btn:hover { opacity: 0.8; }
+.edit-btn { background-color: #007bff; }
+.delete-btn { background-color: #dc3545; }
+.view-btn { background-color: #28a745; } /* Màu xanh lá cây cho nút xem */
+.update-pwd-btn { background-color: #ffc107; color: #212529; } /* Màu vàng */
+.lock-btn { background-color: #6c757d; } /* Màu xám */
+.unlock-btn { background-color: #17a2b8; } /* Màu xanh mòng két */

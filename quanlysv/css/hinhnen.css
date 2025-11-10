@@ -1,0 +1,192 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: 'Lato', sans-serif;
+  background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
+}
+
+/* ==================== BACKGROUND STARS ==================== */
+#stars, #stars2, #stars3 {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  display: block;
+  z-index: 0;
+}
+#stars {
+  width: 1px; height: 1px;
+  background: transparent;
+  box-shadow: 100px 200px #FFF, 500px 1000px #FFF, 1500px 750px #FFF, 1200px 1800px #FFF, 800px 300px #FFF;
+  animation: animStar 50s linear infinite;
+}
+#stars:after {
+  content: " ";
+  position: absolute; top: 2000px;
+  width: 1px; height: 1px;
+  background: transparent;
+  box-shadow: inherit;
+}
+#stars2 {
+  width: 2px; height: 2px;
+  background: transparent;
+  box-shadow: 300px 700px #FFF, 1300px 1500px #FFF, 1000px 300px #FFF, 1800px 900px #FFF, 1600px 1700px #FFF;
+  animation: animStar 100s linear infinite;
+}
+#stars2:after {
+  content: " ";
+  position: absolute; top: 2000px;
+  width: 2px; height: 2px;
+  background: transparent;
+  box-shadow: inherit;
+}
+#stars3 {
+  width: 3px; height: 3px;
+  background: transparent;
+  box-shadow: 600px 400px #FFF, 1400px 800px #FFF, 500px 1600px #FFF, 1800px 1200px #FFF, 900px 1400px #FFF;
+  animation: animStar 150s linear infinite;
+}
+#stars3:after {
+  content: " ";
+  position: absolute; top: 2000px;
+  width: 3px; height: 3px;
+  background: transparent;
+  box-shadow: inherit;
+}
+@keyframes animStar {
+  from { transform: translateY(0px); }
+  to   { transform: translateY(-2000px); }
+}
+
+/* ==================== LOGIN WRAPPER ==================== */
+.wrapper {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  background: rgba(250, 252, 255, 0.9);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+  width: 800px;
+  max-width: 95%;
+  overflow: hidden;
+}
+
+/* Bên trái: form */
+.container {
+  flex: 1;
+  padding: 30px;
+  text-align: center;
+  background: rgba(255,255,255,0.15);
+  max-width: 420px; /* Giới hạn chiều rộng form */
+}
+h2 {
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: #0e0d0d;
+}
+.role-toggle {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 15px;
+  background: #f2f2f2;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 180px;
+}
+.role-toggle button {
+  flex: 1;
+  padding: 8px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  background: transparent;
+}
+.role-toggle button.active {
+  background: #2575fc;
+  color: #fff;
+}
+
+/* Input với icon */
+.form-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+.form-group label {
+  font-size: 14px;
+  color: #111010;
+  display: block;
+  margin-bottom: 5px;
+}
+.input-icon {
+  position: relative;
+  width: 100%;
+}
+.input-icon .icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  color: #666;
+  font-size: 16px;
+  pointer-events: none;
+}
+.input-icon input {
+  width: 82%; 
+  padding: 10px 12px 10px 40px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  outline: none;
+}
+.input-icon input:focus {
+  border-color: #6a11cb;
+  box-shadow: 0 0 5px rgba(106,17,203,0.5);
+}
+
+.btn {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(90deg, #6a11cb, #2575fc);
+  color: #fff;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+.btn:hover { background: linear-gradient(90deg, #2575fc, #6a11cb); }
+
+.links {
+  margin-top: 15px;
+  font-size: 14px;
+}
+.links a {
+  color: #0f0d0d;
+  text-decoration: none;
+}
+.links a:hover { text-decoration: underline; }
+
+/* Bên phải: logo */
+.right-panel {
+  flex: 1;
+  background: #f7f9fc;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  text-align: center;
+}
+.right-panel img {
+  width: 350px; /* Tăng gấp đôi kích thước logo */
+  margin-bottom: 0; /* Bỏ khoảng cách dưới vì đã xóa tiêu đề */
+}
+.right-panel h1 {
+  font-size: 22px;
+  color: #333;
+}
